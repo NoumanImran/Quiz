@@ -1,81 +1,96 @@
 main() {
-  var list = <String>[
-    "first",
-    'second',
-    'third',
+  final recipeIngredients = <String>[
+    'Onions',
+    'Chilli',
+    'Chicken',
+    'Water',
+    'Salt'
   ];
+  final recipeSteps = <String>['Onions', 'Chilli', 'Chicken', 'Water', 'Salt'];
 
-  Recipe recipe1 = Recipe(
-      id: '1',
-      title: "Pizza",
-      imageUrl: "pizza.png",
-      duration: '2hrs',
-      isGlutenFree: true,
-      isVegan: false,
-      isVegetarian: true,
-      isLactoseFree: false,
-      ingredients: list);
+  Recipe Pizza = Recipe(
+    id: '1',
+    title: "Pizza",
+    imageUrl: "pizza.png",
+    duration: '2hrs',
+    isGlutenFree: true,
+    isVegan: false,
+    isVegetarian: true,
+    isLactoseFree: false,
+    ingredients: recipeIngredients,
+    steps: recipeSteps,
+  );
 
-  Recipe recipe2 = Recipe(
-      id: '2',
-      title: "Burger",
-      imageUrl: "burger.png",
-      duration: '3hrs',
-      isGlutenFree: true,
-      isVegan: false,
-      isVegetarian: true,
-      isLactoseFree: false,
-      ingredients: list);
+  Recipe Burger = Recipe(
+    id: '2',
+    title: "Burger",
+    imageUrl: "burger.png",
+    duration: '3hrs',
+    isGlutenFree: true,
+    isVegan: false,
+    isVegetarian: true,
+    isLactoseFree: false,
+    ingredients: recipeIngredients,
+    steps: recipeSteps,
+  );
 
-  Recipe recipe3 = Recipe(
-      id: '3',
-      title: "Sandwich",
-      imageUrl: "Sandwich.png",
-      duration: '4hrs',
-      isGlutenFree: true,
-      isVegan: false,
-      isVegetarian: true,
-      isLactoseFree: false,
-      ingredients: list);
+  Recipe Sandwich = Recipe(
+    id: '3',
+    title: "Sandwich",
+    imageUrl: "Sandwich.png",
+    duration: '4hrs',
+    isGlutenFree: true,
+    isVegan: false,
+    isVegetarian: true,
+    isLactoseFree: false,
+    ingredients: recipeIngredients,
+    steps: recipeSteps,
+  );
 
-  var totalrecip = [recipe1, recipe2, recipe3];
+  final totalrecip = [Pizza, Burger, Sandwich];
 
-  for (var recipes in totalrecip) {
-    print('ID: ${recipes.id}');
-    print('Title: ${recipes.title}');
-    print('Image: ${recipes.imageUrl}');
-    print('Duration: ${recipes.duration}');
-    print(recipes.isGlutenFree);
-    print(recipes.isVegan);
-    print(recipes.isVegetarian);
-    print(recipes.isLactoseFree);
-    print(recipes.ingredients);
+  for (final items in totalrecip) {
+    print('ID: ${items.id}');
+    print('Title: ${items.title}');
+    print('Image: ${items.imageUrl}');
+    print('Duration: ${items.duration}');
+    print('Is Recipe is Glutenfree ${items.isGlutenFree}');
+    print('Is Recipe is Vegan ${items.isVegan}');
+    print('Is Recipe is Vegetarian ${items.isVegetarian}');
+    print('Is Recipe is Lactosfree ${items.isLactoseFree}');
+    print('Ingredients Used: ${items.ingredients}');
+    print('Steps ${items.ingredients}');
+    print('\n');
   }
 }
 
 
 //Class
 
+
 class Recipe {
-  String id;
-  late String title;
-  late String imageUrl;
-  late String duration;
-  var ingredients;
-  bool isGlutenFree;
-  bool isVegan;
-  bool isVegetarian;
-  bool isLactoseFree;
+  late final id;
+  late final title;
+  late final imageUrl;
+  late final duration;
+  late final ingredients;
+  late final steps;
+  late final isGlutenFree;
+  late final isVegan;
+  late final isVegetarian;
+  late final isLactoseFree;
 
   Recipe({
-    required String this.id,
-    required List ingredients,
-    required String this.title,
-    required String this.imageUrl,
-    required String this.duration,
-    required bool this.isGlutenFree,
-    required bool this.isVegan,
-    required bool this.isVegetarian,
-    required bool this.isLactoseFree,
+    required this.id,
+    required this.title,
+    required this.imageUrl,
+    required this.duration,
+    required this.ingredients,
+    required this.steps,
+    required this.isGlutenFree,
+    required this.isVegan,
+    required this.isVegetarian,
+    required this.isLactoseFree,
   }) {}
 }
+
