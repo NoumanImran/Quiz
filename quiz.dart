@@ -15,22 +15,22 @@ main() {
       isVegetarian: true,
       isLactoseFree: false,
       ingredients: list);
-  // creating the instance here...2
+
   Recipe recipe2 = Recipe(
       id: '2',
-      title: "cheenez",
-      imageUrl: "aspeech.jpg",
+      title: "Burger",
+      imageUrl: "burger.png",
       duration: '3hrs',
       isGlutenFree: true,
       isVegan: false,
       isVegetarian: true,
       isLactoseFree: false,
       ingredients: list);
-  // creating the instance here...3
+
   Recipe recipe3 = Recipe(
       id: '3',
-      title: "rice",
-      imageUrl: "aspeech.jpg",
+      title: "Sandwich",
+      imageUrl: "Sandwich.png",
       duration: '4hrs',
       isGlutenFree: true,
       isVegan: false,
@@ -41,10 +41,10 @@ main() {
   var totalrecip = [recipe1, recipe2, recipe3];
 
   for (var recipes in totalrecip) {
-    print(recipes.id);
-    print(recipes.title);
-    print(recipes.imageUrl);
-    print(recipes.duration);
+    print('ID: ${recipes.id}');
+    print('Title: ${recipes.title}');
+    print('Image: ${recipes.imageUrl}');
+    print('Duration: ${recipes.duration}');
     print(recipes.isGlutenFree);
     print(recipes.isVegan);
     print(recipes.isVegetarian);
@@ -78,5 +78,4 @@ class Recipe {
     required bool this.isVegetarian,
     required bool this.isLactoseFree,
   }) {}
-
 }
